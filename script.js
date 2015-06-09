@@ -1,9 +1,14 @@
+document.addEventListener("DOMContentLoaded", function(event) { 
+  var tileUrl = 'http://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png';
+  var map = L.map('map').setView([52.2808, 5.4918], 9); 
+  L.tileLayer(tileUrl).addTo(map);
+});
+
 
 
 function makePlace(name){
-  var place = d3.select("#name")
-  console.log(place)
-  loadPlace(place)
+  console.log(name)
+  loadPlace(name)
 }
 
 function loadPlace(place){
@@ -15,15 +20,14 @@ function loadPlace(place){
      if (concepts.features.length > 0 ){
        
        console.log(concepts)
-       // L.geoJson(json).addTo(map);
-     }
-    
-  }
-  
-}
-
-  var tileUrl = 'http://otile2.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png';
-  var map = L.map('map');
-  L.tileLayer(tileUrl).addTo(map);
-  map.setView([53.079529, 6.614894], 12);   
+       
+       var concept = concepts.features.map(function(object){
+         return object.geometry.length > 0
+       })
+       console.log(concept)
+       L.geoJson(concepts).addTo(map);
+     }  
+  }) 
+};
+ 
   
