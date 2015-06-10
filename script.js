@@ -9,17 +9,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 function loadName(place){
-
-  console.log(place)
+  removePlace();
   loadPlace(place);
-  makeText(place)
+  makeText(place);
 };
 
 function loadPlace(place){
   var url = "https://api.histograph.io/search?name=" + "*"+place + "&type=hg:Place";
   d3.json(url, function(err, concepts){
     console.log("Calling api.histograph.io for places with: '" + place + "':");
-    console.log(concepts.features[0].properties.pits[0].name);
     geojsonLayer = L.geoJson(concepts);
     geojsonLayer.addTo(map).bindPopup();
   }); 
@@ -27,12 +25,15 @@ function loadPlace(place){
 
 
 function makeText(place){
-   //get the text from
-  var url = "http://nl.wikipedia.org/w/api.php?action=query&titles="+place+"%20(landvorm)&prop=revisions&rvprop=content&format=json"
-  d3.json(url, function(err, content){
-    console.log(content)
-  })
+
   var content = d3.text(place+".txt", function(tekst){
     document.getElementById("text").innerHTML = tekst;
-  } );
-}
+  });
+};
+
+
+function removePlace(){
+  if(map.hasLayer(geojsonLayer)){
+    map.removeLayer(geojsonLayer)
+  ;}
+};
