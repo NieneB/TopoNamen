@@ -70,5 +70,6 @@ p{
   font-size: 12pt;
   border-radius: 5px;
   overflow: scroll;
-  height: 300px;
+  height: 350px;
+  overflow-x:hidden;
 }
