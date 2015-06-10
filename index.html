@@ -3,31 +3,31 @@
   <head>
     <title>Plaatsnaam Achtervoegsel</title>
     <meta charset="utf-8">
-    <meta name="viewport"content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.css' rel='stylesheet' />
-    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.js'></script>
     <script src="script.js" type="text/javascript" charset="utf-8"></script>
-    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
-    
   </head>
 
   <body>
     <div id="info">
       <h1>Plaatsnaam Achtervoegsel</h1>
-      <p> Klik op een achtervoegsel en zie waar in Nederland dit voorkomt:</p>
-    <div id="place">
-     <div id="places" onclick="loadName('zee')">Zee</div>
-     <div id="places" onclick="loadName('donk')">Donk</div>
-     <div id="places" onclick="loadName('kamp')">Kamp</div>
-     <div id="places" onclick="loadName('broek')">Broek</div>
-     <div id="places" onclick="loadName('zijl')">Zijl</div>
-     <div id="places" onclick="loadName('lo')">Lo</div>
-   </div>
-   <div> <p><span id="text"> Informatie over de toponiemen </span> </p></div>
-   </div>
-   <div id="map"> </div>
+      <p> Klik op een achtervoegsel om te zien waar in Nederland dit voorkomt:</p>
+      <div id="place">
+         <div id="places" onclick="loadName('zee')">Zee</div>
+         <div id="places" onclick="loadName('donk')">Donk</div>
+         <div id="places" onclick="loadName('kamp')">Kamp</div>
+         <div id="places" onclick="loadName('broek')">Broek</div>
+         <div id="places" onclick="loadName('zijl')">Zijl</div>
+         <div id="places" onclick="loadName('lo')">Lo</div>
+         <div id="places" onclick="loadName('terp')">Terp</div>
+         <div id="places" onclick="loadName('horn')">Horn</div>
+      </div>
+      <div> <p><span id="text"> Informatie over de toponiemen </span> </p>
+      </div>
+    </div>
+    <div id="map"> </div>
   </body>
+  
 </html>
