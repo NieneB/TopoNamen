@@ -24,7 +24,7 @@ p{
   right:0px;
 }
 #place{
-  margin-left: 30%;
+  margin-left: 10px;
   display: block;
   z-index:0;
 }
@@ -39,12 +39,13 @@ p{
   vertical-align: middle;
   color: white;
   font-size: 14pt;
-  width:150px;
+  width:90px;
   height:40px;
   box-shadow: 3px 3px 5px white;
+  display: inline-block;
 }
 
-#info{
+#panel{
   padding: 10px 10px 10px 10px ;
   background-color: grey;
   width:450px;
@@ -56,4 +57,9 @@ p{
   position: fixed;
   z-index:1;
   text-align: center;
+}
+
+#info{
+  text-align: justify;
+  font-size: 12pt;
 }
