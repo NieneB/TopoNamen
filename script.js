@@ -7,13 +7,14 @@ var broek = {
 
 document.addEventListener("DOMContentLoaded", function(event) { 
   var tileUrl = 'http://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.png';
-  map = L.map('map').setView([52.3808, 4.6000], 8); 
+  map = L.map('map').setView([52.3808, 4.0000], 8); 
   L.tileLayer(tileUrl).addTo(map);
 });
 
 function loadName(place){
-  document.getElementById("text").innerHTML = place;
-  
+  var topo = place+".tekst"
+  document.getElementById("text").innerHTML = topo
+  console.log(place)
   loadPlace(place);
   
 };

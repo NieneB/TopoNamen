@@ -21,31 +21,31 @@ h1{
   right:0px;
 }
 #place{
-  position: fixed;
+  margin: 20%;
   display: block;
   z-index:0;
-  top:150px;
-  left: 150px;
-  
 }
+
 #places{
   padding:10px;
   margin: 10px;
   background-color:black;
   border-radius: 5px;
   cursor: pointer;
-  text-align: center;
+  text-align: middle;
+  vertical-align: middle;
   color: white;
-  font-size: 18pt;
+  font-size: 16pt;
   width:200px;
   height:50px;
+  box-shadow: 3px 3px 5px white;
 }
 
 #info{
   padding: 10px 10px 10px 10px ;
   background-color: grey;
   width:450px;
-  height:90%;
+  height:100%;
   top: 10px;
   bottom:0px;
   left: 10px;
