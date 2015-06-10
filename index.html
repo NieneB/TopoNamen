@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Toponamen</title>
+    <title>Toponiem Suffixen</title>
     <meta charset="utf-8">
     <meta name="viewport"content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
@@ -11,15 +11,23 @@
     <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.js'></script>
     <script src="script.js" type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <script src="text.js" type="text/javascript" charset="utf-8"></script>
+    
   </head>
 
   <body>
+    <div id="info">
+      <h1> Toponiem Suffixen </h1>
     <div id="place">
-     <div id="places" onclick="loadName('zee')"> Plaatsen met zee in de naam</div>
-     <div id="places" onclick="loadName('donk')"> Plaatsen met donk in de naam</div>
-     <div id="places" onclick="loadName('wetering')"> Plaatsen met wetering in de naam</div>
-     <div id="places" onclick="loadName('maat')"> Plaatsen met maat in de naam</div>
+     <div id="places" onclick="loadName('zee')"> Suffix "Zee"</div>
+     <div id="places" onclick="loadName('donk')"> Suffix "Donk"</div>
+     <div id="places" onclick="loadName('kamp')"> Suffix "Kamp"</div>
+     <div id="places" onclick="loadName('broek')"> Suffix "Broek"</div>
+     <div id="places" onclick="loadName('zijl')"> Suffix "zijl"</div>
+
+     <div> <span id="text"> Informatie over de toponiemen </span> </div>
    </div>
-    <div id="map"> </div>
+   </div>
+   <div id="map"> </div>
   </body>
 </html>
