@@ -42,7 +42,7 @@ p{
   width:90px;
   height:40px;
   box-shadow: 3px 3px 5px white;
-  display: block;
+  display: inline-block;
 }
 
 #panel{
