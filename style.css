@@ -1,0 +1,35 @@
+
+body{
+  background-color: black;
+  margin: 0px;
+  padding: 0px;
+}
+#map{
+  width:80%;
+  height:100%;
+  position: fixed;
+  z-index: -1;
+  float: right;
+  right:0px;
+}
+#place{
+
+  position: fixed;
+  display: block;
+  z-index:0;
+  top:150px;
+  left: 150px;
+  
+}
+#places{
+  padding:10px;
+  margin: 10px;
+  background-color:grey;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  font-size: 18pt;
+  width:150px;
+  height:50px;
+}
