@@ -29,7 +29,8 @@ p{
   z-index:0;
 }
 
-#places{
+
+.places{
   padding:10px;
   margin: 10px;
   background-color:black;

@@ -15,17 +15,19 @@ function loadName(place){
 };
 
 function loadPlace(place){
-  var url = "https://api.histograph.io/search?name=" + "*"+place + "&type=hg:Place";
+  var url = "https://api.histograph.io/search?name=" + "*"+place + "&type=hg:Place&exact=false";
   d3.json(url, function(err, concepts){
     console.log("Calling api.histograph.io for places with: '" + place + "':");
-    geojsonLayer = L.geoJson(concepts);
-    geojsonLayer.addTo(map).bindPopup();
+    console.log(concepts)
+    geojsonLayer = L.geoJson(concepts, {
+      onEachFeature: onEachFeature
+    });
+    geojsonLayer.addTo(map);
   }); 
 };
 
 
 function makeText(place){
-
   var content = d3.text(place+".txt", function(tekst){
     document.getElementById("text").innerHTML = tekst;
   });
@@ -37,3 +39,9 @@ function removePlace(){
     map.removeLayer(geojsonLayer)
   ;}
 };
+
+
+function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+        layer.bindPopup(feature.properties.pits[0].name);
+}
