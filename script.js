@@ -2,11 +2,16 @@ var map;
 var geojsonLayer;
 
 
-document.addEventListener("DOMContentLoaded", function(event) { 
+document.addEventListener("DOMContentLoaded", function(event) {
   var tileUrl = 'http://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.png';
-  map = L.map('map').setView([52.3808, 4.0000], 8); 
+
+  map = L.map('map').setView([52.3808, 4.0000], 8);
   L.tileLayer(tileUrl).addTo(map);
 });
+
+
+// ----------
+// -----------
 
 function loadName(place){
   removePlace();
@@ -20,7 +25,8 @@ function loadPlace(place){
     console.log("Calling api.histograph.io for places with: '" + place + "':");
     console.log(concepts)
     geojsonLayer = L.geoJson(concepts, {
-      onEachFeature: onEachFeature
+      onEachFeature: onEachFeature,
+      opacity: 0.5
     });
     geojsonLayer.addTo(map);
   }); 
