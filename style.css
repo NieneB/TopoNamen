@@ -51,11 +51,15 @@ p{
 
 #panel{
   padding: 10px 10px 10px 10px ;
+  background-image: url('http://resolver.kb.nl/resolve?urn=urn:gvn:KONB16:413219070&role=image&size=variable') ;
+  background-position: center;
   background-color:  #ffcc66;
+  background-blend-mode: soft-light;
   width:450px;
-  height:100%;
+  bottom:10px;
+  height:95%;
   top: 10px;
-  bottom:0px;
+  
   left: 10px;
   border-radius: 5px;
   position: fixed;
@@ -69,7 +73,7 @@ p{
   display: inline-block;
   padding: 10px;
   width: 350px;
-  color:white;
+  color: white;
   background-color: #999999;
   text-align: left ;
   font-size: 12pt;

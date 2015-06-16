@@ -28,7 +28,7 @@ function loadPlace(place){
       pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, {
             radius: 12,
-            color: "#ffcc33",
+            color: "#ff9933",
             fillOpacity: 0.7
           
         });
