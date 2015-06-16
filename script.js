@@ -3,7 +3,7 @@ var geojsonLayer;
 
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  var tileUrl = 'http://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.png';
+  var tileUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 
   map = L.map('map').setView([52.3808, 4.0000], 8);
   L.tileLayer(tileUrl).addTo(map);
@@ -25,10 +25,17 @@ function loadPlace(place){
     console.log("Calling api.histograph.io for places with: '" + place + "':");
     console.log(concepts)
     geojsonLayer = L.geoJson(concepts, {
-      onEachFeature: onEachFeature,
-      opacity: 0.5
-    });
-    geojsonLayer.addTo(map);
+      pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, {
+            radius: 12,
+            color: "#ffcc33",
+            fillOpacity: 0.7
+          
+        });
+      } ,
+      onEachFeature: onEachFeature 
+    })
+    .addTo(map);
   }); 
 };
 
@@ -51,3 +58,9 @@ function onEachFeature(feature, layer) {
     // does this feature have a property named popupContent?
         layer.bindPopup(feature.properties.pits[0].name);
 }
+
+var myMarker = L.icon({
+  iconUrl: 'marker.svg',
+  iconSize: [50,50],
+  iconanchor: [50,50]
+})

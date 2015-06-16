@@ -1,6 +1,8 @@
 
 body{
-  background-color: black;
+  background-blend-mode: multiply;
+  background-color: white;
+  
   margin: 0px;
   padding: 0px;
   font-family: Verdana;
@@ -10,7 +12,8 @@ h1{
   font-family: Verdana;
   display: inline;
   font-weight:bold;
-  color: white;
+  color: black;
+  
 }
 p{
   
@@ -22,6 +25,7 @@ p{
   z-index: -1;
   float: right;
   right:0px;
+  opacity: 0.9;
 }
 #place{
   margin-left: 10px;
@@ -42,13 +46,12 @@ p{
   font-size: 14pt;
   width:90px;
   height:40px;
-  box-shadow: 3px 3px 5px white;
   display: inline-block;
 }
 
 #panel{
   padding: 10px 10px 10px 10px ;
-  background-color: grey;
+  background-color:  #ffcc66;
   width:450px;
   height:100%;
   top: 10px;
@@ -66,6 +69,7 @@ p{
   display: inline-block;
   padding: 10px;
   width: 350px;
+  color:white;
   background-color: #999999;
   text-align: left ;
   font-size: 12pt;
