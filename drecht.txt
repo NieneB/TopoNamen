@@ -1,4 +1,4 @@
-<h1>~drecht</h1>
+<h2>~drecht</h2>
 <p>
 Een drecht (in Friesland en soms in West-Friesland ook dracht genoemd), trecht of tricht is een gedeeltelijk synoniem van een voorde (Middelnederlands: vort of vorda). Beide woorden hadden als betekenis: </p>
 <ul>
@@ -7,3 +7,4 @@ Een drecht (in Friesland en soms in West-Friesland ook dracht genoemd), trecht o
 <li>mogelijk heeft het ook de betekenis van een recht op doorgang</li>
 </ul>
 <p>Steden met een dergelijk achtervoegsel in hun naam hebben die meestal te danken aan de nabijheid van een doorwaadbare plaats.</p>
+<a href="http://nl.wikipedia.org/wiki/-drecht"> bron </a>
