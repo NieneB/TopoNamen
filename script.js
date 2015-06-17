@@ -10,12 +10,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 
+
+
+
 // ----------
 // -----------
+
 
 function loadName(place){
   removePlace();
   loadPlace(place);
+
   makeText(place);
 };
 

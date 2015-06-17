@@ -1,65 +1,66 @@
-
+@font-face {
+    font-family: 'Amaranth'; /*a name to be used later*/
+    src: url('Amaranth-Bold.otf'); /*URL to font*/
+}
 body{
-  background-blend-mode: multiply;
-  background-color: white;
-  
+  background-color: #E9DBB7;
   margin: 0px;
   padding: 0px;
-  font-family: Verdana;
+  font-family: Amaranth, Geneva, sans-serif;
 }
 h1{
-  font-size: 32px;  
-  font-family: Verdana;
+  font-size: 38px;  
   display: inline;
   font-weight:bold;
-  color: black;
-  
+  color: #2B2118;
 }
 p{
-  
+ color: #2B2118;
 }
 #map{
   width:100%;
   height:100%;
   position: fixed;
   z-index: -1;
-  float: right;
-  right:0px;
-  opacity: 0.9;
+  opacity: 0.8;
 }
+
 #place{
-  margin-left: 10px;
-  display: block;
+  display: inline-block;
   z-index:0;
+  width:400px;
 }
 
 
 .places{
   padding:10px;
   margin: 10px;
-  background-color:black;
+  background-color: #2B2118;
   border-radius: 5px;
   cursor: pointer;
-  text-align: middle;
+  text-align: center;
   vertical-align: middle;
   color: white;
   font-size: 14pt;
   width:90px;
   height:40px;
   display: inline-block;
+  line-height: 40px;
+}
+.places:hover{
+  background-color: #B3BC31;
 }
 
 #panel{
   padding: 10px 10px 10px 10px ;
   background-image: url('http://resolver.kb.nl/resolve?urn=urn:gvn:KONB16:413219070&role=image&size=variable') ;
   background-position: center;
-  background-color:  #ffcc66;
+  background-color:  #EC8F2D;
   background-blend-mode: soft-light;
   width:450px;
   bottom:10px;
   height:95%;
   top: 10px;
-  
   left: 10px;
   border-radius: 5px;
   position: fixed;
@@ -67,18 +68,17 @@ p{
   text-align: center;
 }
 
-
 #info{
   margin-top:20px;
   display: inline-block;
   padding: 10px;
-  width: 350px;
+  width: 360px;
   color: white;
-  background-color: #999999;
+  background-color: #6A5544;
   text-align: left ;
   font-size: 12pt;
   border-radius: 5px;
-  overflow: scroll;
+  overflow: auto;
   height: 35%;
   overflow-x:hidden;
 }
