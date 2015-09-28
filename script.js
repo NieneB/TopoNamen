@@ -33,7 +33,7 @@ function loadPlace(place){
       return object.geometry.geometries[0].type == "Point"
     });
     console.log(concept)
-    geojsonLayer = L.geoJson(concepts, {
+    geojsonLayer = L.geoJson(concept, {
       pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, {
             radius: 12,
