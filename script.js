@@ -30,7 +30,9 @@ function loadPlace(place){
     console.log("Calling api.histograph.io for places with: '" + place + "':");
     console.log(concepts)
     var concept = concepts.features.filter(function(object){
-      return object.geometry.geometries[0].type == "Point"
+      return object.geometry.geometries.map(function(obj){
+        return obj.type == "Point" 
+      })
     });
     console.log(concept)
     geojsonLayer = L.geoJson(concept, {
